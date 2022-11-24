@@ -20,6 +20,7 @@ echo "net.netfilter.nf_conntrack_max=165535" >> package/base-files/files/etc/sys
 
 #增加设置向导
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wizard package/luci-app-wizard
+svn co https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
 
 #安装
 ./scripts/feeds install -af
