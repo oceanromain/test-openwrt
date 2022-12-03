@@ -18,18 +18,15 @@ sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_genera
 #sed -i "s/hostname='OpenWrt'/hostname='Openwrt-BY'/g" ./package/base-files/files/bin/config_generate
 echo "net.netfilter.nf_conntrack_max=165535" >> package/base-files/files/etc/sysctl.conf 
 rm -rf package/lean/autocore
-echo "     _________                                                " > package/base-files/files/etc/banner
-echo "    /        /\      _    ___ ___  ___                        " >> package/base-files/files/etc/banner
-echo "   /  LE    /  \    | |  | __|   \| __|                       " >> package/base-files/files/etc/banner
-echo "  /    DE  /    \   | |__| _|| |) | _|                        " >> package/base-files/files/etc/banner
-echo " /________/  LE  \  |____|___|___/|___|                       " >> package/base-files/files/etc/banner
-echo " \        \   DE /                                            " >> package/base-files/files/etc/banner
-echo "  \    LE  \    /  -------------------------------------------" >> package/base-files/files/etc/banner
-echo "   \  DE    \  /    %D %V, %C                                 " >> package/base-files/files/etc/banner
-echo "    \________\/    -------------------------------------------" >> package/base-files/files/etc/banner
-echo "--------------------------------------------------------------" >> package/base-files/files/etc/banner
-echo "                   Openwrt by Starnet                         " >> package/base-files/files/etc/banner
-echo "--------------------------------------------------------------" >> package/base-files/files/etc/banner
+echo " ____  _                        _      ___                                _   " > package/base-files/files/etc/banner
+echo "/ ___|| |_ __ _ _ __ _ __   ___| |_   / _ \ _ __   ___ _ ____      ___ __| |_ " >> package/base-files/files/etc/banner
+echo "\___ \| __/ _` | '__| '_ \ / _ \ __| | | | | '_ \ / _ \ '_ \ \ /\ / / '__| __|" >> package/base-files/files/etc/banner
+echo " ___) | || (_| | |  | | | |  __/ |_  | |_| | |_) |  __/ | | \ V  V /| |  | |_ " >> package/base-files/files/etc/banner
+echo "|____/ \__\__,_|_|  |_| |_|\___|\__|  \___/| .__/ \___|_| |_|\_/\_/ |_|   \__|" >> package/base-files/files/etc/banner
+echo "                                           |_|                                " >> package/base-files/files/etc/banner
+echo "------------------------------------------------------------------------------" >> package/base-files/files/etc/banner
+echo "                        %D %V %C                         " >> package/base-files/files/etc/banner
+echo "------------------------------------------------------------------------------" >> package/base-files/files/etc/banner
 
 #增加设置向导
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wizard package/luci-app-wizard
