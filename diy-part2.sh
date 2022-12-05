@@ -34,10 +34,11 @@ svn co https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotim
 svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-beardropper package/luci-app-beardropper
 svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-cowbping package/luci-app-cowbping
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-rebootschedule package/luci-app-rebootschedule
+svn co https://github.com/ximiTech/luci-app-poweroff package/luci-app-poweroff
 
 #修改
 sed -i '7s/control/system/g' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua 
-sed -i 's/R22.11.11/R20221205/g' ./package/lean/default-settings/files/zzz-default-settings
+sed -i 's/R22.11.11/R22.12.1/g' ./package/lean/default-settings/files/zzz-default-settings
 chmod +x package/luci-app-rebootschedule/root/etc/init.d/rebootschedule
 
 #安装
