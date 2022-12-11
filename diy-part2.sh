@@ -12,10 +12,10 @@
 
 # Modify default IP
 #修改默认IP
-sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.11.1/g' package/base-files/files/bin/config_generate
 #修改主机名
-#sed -i "/uci commit system/i\uci set system.@system[0].hostname='Openwrt-BY'" package/lean/default-settings/files/zzz-default-settings
-#sed -i "s/hostname='OpenWrt'/hostname='Openwrt-BY'/g" ./package/base-files/files/bin/config_generate
+#sed -i "/uci commit system/i\uci set system.@system[0].hostname='Openwrt-SY'" package/lean/default-settings/files/zzz-default-settings
+#sed -i "s/hostname='OpenWrt'/hostname='Openwrt-SY'/g" ./package/base-files/files/bin/config_generate
 echo "net.netfilter.nf_conntrack_max=165535" >> package/base-files/files/etc/sysctl.conf 
 rm -rf package/lean/autocore
 echo " ____  _                        _      ___                __        __    _   " > package/base-files/files/etc/banner
@@ -38,7 +38,7 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-rebootschedul
 #修改
 sed -i '7s/control/system/g' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua 
 sed -i 's/R22.11.11/R22.12.1/g' ./package/lean/default-settings/files/zzz-default-settings
-chmod +x package/luci-app-rebootschedule/root/etc/init.d/rebootschedule
+chmod +x package/luci-app-rebootschedule/root/etc/init.d/rebootschedule 
 
 #安装
 ./scripts/feeds install -af
